@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        /* ---------navbar------ */
+
+        .navbar-nav li:hover>ul.dropdown-menu {
+            display: block;
+        }
+
+        .navbar .navbar-nav .nav-btn {
+            margin: 0px 0px;
+        }
+
+        .dropdown-wall {
+            position: relative;
+        }
+
+        .dropdown-wall>.dropdown-menu {
+            top: 0px;
+            margin-top: -3px;
+            left: 100%;
+        }
+
+        .dropdown-Floor {
+            position: relative;
+        }
+
+        .dropdown-Floor>.dropdown-menu {
+            top: 0px;
+            margin-top: -5px;
+            left: 100%;
+        }
+
+        .dropdown-Special {
+            position: relative;
+        }
+
+        .dropdown-Special>.dropdown-menu {
+            top: 0px;
+            margin-top: -5px;
+            left: 100%;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: gray;
+        }
+
+        .collapse .navbar-nav li:hover {
+            background-color: gray;
+        }
+
+        /* ------navbar end-------- */
+        /* -------slider start------ */
+         .carousel-inner .carousel-item img {
+            height: 400px;
+
+        } 
+
+        .carousel-inner .carousel-caption h1 {
+            text-align: center;
+            position: relative;
+            bottom: 100px;
+            left: 0px; 
+            color: black;
+             font-family: 'Rubik Distressed', cursive;
+            
+        }
+        @media(max-width:450){
+            .carousel-inner .carousel-caption h1{
+                text-align: center;
+                color: black;
+                 position: relative;
+                top: 100px;
+                left: 0px; 
+                font-size: 40px;
+                font-weight: bold;
+                font-family: 'Rubik Distressed', cursive;
+            }
+        }
+
+        .carousel-inner .carousel-caption button {
+
+            padding: 10px;
+            margin: 0px;
+            border: 1px solid black;
+            background-color: gray;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px;
+            position: relative;
+            bottom: 85%;
+        }
+
+        /* ------slider end------ */
+        .txt h3 {
+            width: 95%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px auto;
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            font-size: 40px;
+            background-color: gray;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        .swiper-slider h3 {
+            width: 95%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px auto;
+            text-align: left;
+            color: black;
+            text-decoration: underline;
+            font-size: 30px;
+            background-color: gray;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+
+        /* -------------------------------------------------------------------------------------- */
+
+
+
+
+        /* ---------------------------------------------------box image------------------------------------ */
+        .box-image {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            top: 10px;
+            left: 0px;
+
+        }
+
+        .box-image h3 {
+            text-align: center;
+            color: black;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        .box-image img {
+            width: 20%;
+            height: 150px;
+        }
+
+        /* --------------------------------------------------------box image end ------------------------------------------*/
+
+
+
+
+      
+       
+       
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg px-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="cera's logo.png" style="width: 100px; height: 60px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item ">
+                        <a style="color: black " class="nav-link active" aria-current="page"
+                            href="homepage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a style="color:black" class="nav-link dropdown-toggle active" href="categories.html"
+                            id="navbarDropdownMenulink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenulink">
+                            <li class="dropdown-wall">
+                                <a class="dropdown-item dropdown-toggle" href="wall.html">Wall Tiles</a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item" href="bathroom wall.html">Bathroom wall tiles</a></li>
+                                    <li><a class="dropdown-item" href="kitchen wall.html">Kitchen wall tiles</a></li>
+                                    <li><a class="dropdown-item" href="outdoor wall.html">Outdoor wall tiles</a></li>
+                                    <li><a class="dropdown-item" href="living room wall.html">Living room tiles</a></li>
+                                    <li><a class="dropdown-item" href="bedroom wall.html">Bedroom tiles</a></li>
+                                    <li><a class="dropdown-item" href="commercial space wall.html">Commercial space
+                                            tiles</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-Floor">
+                                <a class="dropdown-item dropdown-toggle" href="floor.html">Floor Tiles</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="kitchen floor.html">Bathroom floor tiles</a></li>
+                                    <li><a class="dropdown-item" href="kitchen floor.html">Kitchen floor tiles</a></li>
+                                    <li><a class="dropdown-item" href="outdoor floor.html">Outdoor floor tiles</a></li>
+                                    <li><a class="dropdown-item" href="living room floor.html">Living room tiles</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bedroom floor.html">Bedroom tiles</a></li>
+                                    <li><a class="dropdown-item" href="commercial space floor.html">Commercial space
+                                            tiles</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-Special Tiles">
+                                <a class="dropdown-item dropdown-toggle" href="Special Tiles.html">Special Tiles</a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item" href="germfree.html">Germs tiles</a></li>
+                                    <li><a class="dropdown-item" href="tac tiles.html">Tac tiles</a></li>
+                                    <li><a class="dropdown-item" href="anti static.html">Anti static tiles</a></li>
+                                    <li><a class="dropdown-item" href="cool roof.html">Cool roof</a></li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: black;" class="nav-link active" href="contact us.html">Contact us</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a style="color: black;" class="nav-link dropdown-toggle active" href="Blog.html"
+                            id="navbarDropdownMenulink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Expert Corner
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenulink">
+                            <li class="dropdown-expert">
+                                <li><a class="dropdown-item" href="Blog.html">Blog</a>
+                                <li><a class="dropdown-item" href="tile guide.html">Tile Guide</a></li>
+                                <li><a class="dropdown-item" href="educational video.html">Educational Videos</a></li>
+                               
+                            </li>
+                        </ul>
+                    
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                   
+                    <button class="btn btn-outline-dark" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <!-- -----------------------------------------slider------------------------------------------------------------- -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="pic 2.jpg" class="d-block w-100 " alt="...">
+                <div class="carousel-caption  ">
+                    <h1>Modern, elegant and luxurious tile</h1>
+                    <button type="button" class="btn">Explore Collection</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="pic 21.jpg" class="d-block w-100 " alt="...">
+                <div class="carousel-caption">
+                    <h1 class="text-center">Modern, elegant and luxurious tile</h1>
+                    <button type="button" class="btn">Explore Collection</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="pic 20.jpg" class="d-block w-100 " alt="...">
+                <div class="carousel-caption">
+                    <h1 class="text-center">Modern, elegant and luxurious tile</h1>
+                    <button type="button" class="btn">Explore Collection</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="pic 12.jpg" class="d-block w-100 " alt="...">
+                <div class="carousel-caption">
+                    <h1 class="text-center">Modern, elegant and luxurious tile</h1>
+                    <button type="button" class="btn">Explore Collection</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="pic 7.jpg" class="d-block w-100 " alt="...">
+                <div class="carousel-caption">
+                    <h1 class="text-center">Modern, elegant and luxurious tile</h1>
+                    <button type="button" class="btn">Explore Collection</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!----------------------------------------------------------swiper--------------------------------------------------------  -->
+    <div class="txt">
+        <h3>Furnished Product</h3>
+    </div>
+    <div class="swiper-slider">
+        <h3>Bathroom Tiles</h3>
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
+            centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
+            coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+            <swiper-slide>
+                <img src="bt1.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="bt2.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="bt3.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="bt4.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="bt5.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="bt6.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="bt7.jpg" />
+            </swiper-slide>
+
+        </swiper-container>
+
+
+        <div class="swiper-slider">
+            <h3>Kitchen Tiles</h3>
+            <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
+                centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
+                coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+                <swiper-slide>
+                    <img src="kitchen1.jpeg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="kitchen2.jpeg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="kitchen3.jpeg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="kitchen4.jpeg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="kitchen5.jpg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="kitchen6.jpg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="kitchen7.webp" />
+                </swiper-slide>
+
+            </swiper-container>
+
+
+            <div class="swiper-slider">
+                <h3>Bedroom Tiles</h3>
+                <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
+                    centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50"
+                    coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+                    coverflow-effect-slide-shadows="true">
+                    <swiper-slide>
+                        <img src="bed1.jpeg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="bed2.jpg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="bed3.jpg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="bed4.jpg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="bed5.jpg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="bed6.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="bed7.jpg" />
+                    </swiper-slide>
+
+                </swiper-container>
+
+
+                <div class="swiper-slider">
+                    <h3>Outdoor Tiles</h3>
+                    <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
+                        centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50"
+                        coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+                        coverflow-effect-slide-shadows="true">
+                        <swiper-slide>
+                            <img src="outdoor1.jpeg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="outdoor2.jpeg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="outdoor3.jpeg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="outdoor4.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="outdoor5.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="outdoor6.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="outdoor7.jpeg" />
+                        </swiper-slide>
+
+                    </swiper-container>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->                <!-- box image start -->
+                 <div class="box-image">
+                    <h3>Our Partners</h3>
+                    <img src="logo1.jpg" alt=""><img src="logo2.jpg" alt=""><img src="logo3.jpg" alt=""><img
+                        src="logo4.jpg" alt=""><img src="logo5.jpg" alt="">
+                </div> 
+<!-- ------------------------------box image end-------------- -->
+<!----------------------------------------------Footer --------------------------------- -->
+
+<footer class=" text-dark pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-5">
+                 <h5 class="text-uppercase mb-4 font-weight-bold text-dark">About Us</h5>
+                <hr class="mb-4">
+                <p>Cera's Tile has secured its position at the forefront of the wholesale tile realm. Renowned as a fast moving tile distribution company, we're striving to press 'reset' on the industry, one stand-out design at a time.</p> 
+                 
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-5">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-dark">Product</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Glazed Vitrified tiles</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Ceramic tiles</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Polished Vitrified tiles</a>
+                </p>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-5">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-dark">INFORMATION</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Term of Uses</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Privacy Policy</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Disclaimer for Tiles</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Emporium Policy</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Disclaimer for Color Accuracy</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark" style="text-decoration: none;">Contact us</a>
+                </p>
+
+            </div>
+            
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-5">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-dark">Contact</h5>
+                <hr class="mb-4">
+                <p>
+                    <li class="fas fa-home mr-3"></li>Latifabad 71000, Pak
+                </p>
+                <p>
+                    <li class="fas  fa-envelope  mr-3"></li>info@Cera'sTiles.com
+                </p>
+                <p>
+                    <li class="fas fa-phone  mr-3"></li>(+92)XXX-XXXXXXX
+                </p>
+               
+            </div>
+              <hr class="mb-4">  
+              <div class="row d-flex justify-content-center">
+                <div>
+                    <p>
+                        Copyright 2023 All Rights Reserved By:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-dark">Cera's</strong>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex-justify-content-center">
+                <div class="text-center">
+                    <ul class="list-unstyled list-inline">
+                        
+                        <li class="list-inline-item">
+                            <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+<!-- ----------------------------footer---------------------------------------- -->
+
+</body>
+
+</html>
